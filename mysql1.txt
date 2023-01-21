@@ -1,0 +1,37 @@
+mysql
+
+
+
+
+sabase pahle database aur user banana hai user banate time ham mobile ip ya 
+system ka ip ya % dekar user create karte hai.
+
+
+fir uske baad port ko on karna padta hai aws ke security storage me jakar
+waha par ham user banate time ip dale hote hai usko on karte hai.
+
+fir telnet par jakar server ip daalkar 3306 daalkar check karte hai
+
+uske baad workbench par server ip daalkar connection banate hai 
+
+
+agar koi error aa rha hai to ufw ko disable karke check kare
+
+2 nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+
+#bind-address           = 127.0.0.1
+mysqlx-bind-address     = 127.0.0.1
+  
+
+fir uske baad mysql server ko restart karte hai 
+
+systemctl restart mysql
+
+me ja kar eddit karenge
+
+
+agar direct user ke sath login karna hai to es command ko use karenge 
+
+
+mysql -u example_user -p
